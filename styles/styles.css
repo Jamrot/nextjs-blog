@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333; 
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #ffffff;
+    position: relative;
+    /* padding-top: 80px; */
+    /* padding: 20px; */
+}
+
+.intro {
+    padding: 20px;
+    /* padding-top: 80px; */
+}
+
+.banner {
+    background-color: #ffffff;  
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+}
+
+.banner a {
+    color: rgb(103, 103, 103);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.banner a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.banner a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.blog-page-content{
+    /* padding-top: 80px; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-page, .blog-post {
+    background-color: white;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.blog-page ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-page li {
+    margin: 10px 0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;  /* 添加边框以区分项目 */
+}
+
+.blog-page li a {
+    text-decoration: none;
+    color: #004d40;  /* 更改为墨绿色 */
+}
+
+.blog-page li:last-child {
+    border-bottom: none;
+}
+
+/* Markdown Content Styling */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    /* padding-top: 80px; */
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px; 
+    /* line-height: 2; */
+}
+
+.content h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.content p, ul {
+    font-family: 'Times New Roman', Times, serif;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+.content a {
+    color: #27ae60;
+    text-decoration: none;
+    border-bottom: 1px solid #27ae60;
+}
+
+.content a:hover {
+    border-bottom: none;
+}
+
+.content code {
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content pre {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+    line-height: 2;
+}
+
+.content blockquote {
+    border-left: 4px solid #27ae60;
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 10px 0;
+    line-height: 2;
+}
+
+.img {
+    max-width: max-content;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}

@@ -1,0 +1,26 @@
+{
+  "name":"blog",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "export": "NEXT_PUBLIC_ASSET_PREFIX=/blog/ next build",
+    "deploy": "gh-pages -d out"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^13.5.6",
+    "next-mdx-remote": "^4.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  },
+  "homepage": "https://jamrot.github.io/blog"
+}
