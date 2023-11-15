@@ -1,6 +1,6 @@
 ---
 Title: USENIX Security 2022 | DBMS fuzzing
-Tags: logic bug, paper
+Tags: ["logic bug", "paper"]
 Created time: September 14, 2023 3:36 PM
 Text: 利用fuzzing生成查询语句，通过构建功能相同的query检查结果是否一致作为oracle，判断查询结果正确性。
 ---

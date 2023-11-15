@@ -1,6 +1,6 @@
 ---
 Title: ICSE 2023 | AChecker
-Tags: logic bug, paper
+Tags: ["logic bug", "paper"]
 Created time: September 28, 2023 5:48 PM
 Text: 通过静态数据流分析确定access control check，并通过符号分析排除intended behavior。
 ---
