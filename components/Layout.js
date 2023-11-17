@@ -10,7 +10,7 @@ function Layout() {
         <div className="layout">
             {/* <Banner /> */}
             <div className="sidebar">
-                <img src="/happydog.jpg" alt="my photo" className="sidebar-photo"/><br/>
+                <img src="/happydog.png" alt="my photo" className="sidebar-photo"/><br/>
                 <div className="sidebar-name">
                     Junming Liu<br/>刘 君 茗
                 </div>
