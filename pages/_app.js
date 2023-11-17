@@ -6,7 +6,8 @@ export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     return (
         <div>
-          {router.pathname !== '/' && <Banner />}
+          {/* {router.pathname !== '/' && <Banner />} */}
+          <Banner />
           <Component {...pageProps} />
         </div>
       );

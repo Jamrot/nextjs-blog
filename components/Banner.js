@@ -6,6 +6,7 @@ function Banner() {
         <div className="banner">
             <Link href="/">Home</Link>
             <Link href="/blog">Blog</Link>
+            <Link href="/publication">Publication</Link>
         </div>
     );
 }
