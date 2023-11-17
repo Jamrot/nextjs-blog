@@ -1,6 +1,6 @@
 ---
 Title: CCS 2021 | IPPO
-Tags: paper, similarity
+Tags: ["paper", "similarity"]
 Created time: September 2, 2023 1:14 PM
 Text: https://github.com/dinghaoliu/IPPO
 Subtitle: Non-Distinguishable Inconsistencies as a Deterministic Oracle for Detecting Security Bugs

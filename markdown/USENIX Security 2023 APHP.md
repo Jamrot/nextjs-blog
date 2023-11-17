@@ -1,6 +1,6 @@
 ---
 Title: USENIX Security 2023 | APHP
-Tags: paper, recurring bug
+Tags: ["paper", "recurring bug"]
 Created time: September 6, 2023 11:08 AM
 Text: 利用补丁提取API Post-Handling行为oracle，比较目标代码与补丁代码的APH模式。
 ---

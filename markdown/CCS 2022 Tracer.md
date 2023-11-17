@@ -1,6 +1,6 @@
 ---
 Title: CCS 2022 | Tracer
-Tags: paper, recurring bug
+Tags: ["paper", "recurring bug"]
 Created time: August 31, 2023 2:22 PM
 Text: 预定义inspection function找到vulnerable source & sink，污点分析提取路径生成signature，比较待测路径和已知漏洞路径的signature。
 ---

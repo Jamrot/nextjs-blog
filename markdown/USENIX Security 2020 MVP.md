@@ -1,6 +1,6 @@
 ---
 Title: USENIX Security 2020 | MVP
-Tags: paper, recurring bug
+Tags: ["paper", "recurring bug"]
 Created time: August 31, 2023 2:22 PM
 Text: 根据数据依赖和抽象指令，提取补丁函数中的vulnerable signature和patch signature与目标函数匹配。
 ---
