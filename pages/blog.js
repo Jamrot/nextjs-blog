@@ -77,10 +77,25 @@ export async function getStaticProps() {
 function TagsPage({ tagsMap }) {
   const [selectedTag, setSelectedTag] = useState(null);
 
+  const getAllPosts = () => {
+    const allPosts = Object.values(tagsMap).flat();
+    const uniquePosts = [];
+    const seenSlugs = new Set();
+
+    allPosts.forEach(post => {
+      if (!seenSlugs.has(post.slug)) {
+        uniquePosts.push(post);
+        seenSlugs.add(post.slug);
+      }
+    });
+
+    return uniquePosts;
+  };
+
   return (
     <div className="blog-page-content">
       <div className="tags-list">
-      <button onClick={() => setSelectedTag(null)}>All</button>
+        <button onClick={() => setSelectedTag(null)}>All</button>
         {Object.keys(tagsMap).map(tag => (
           <button key={tag} onClick={() => setSelectedTag(tag)}>
             {tag}
@@ -99,7 +114,7 @@ function TagsPage({ tagsMap }) {
                   <br/>{post.Tags.join(', ')}
                 </li>
               ))
-            : Object.values(tagsMap).flat().map(post => (
+            : getAllPosts().map(post => (
                 <li key={post.slug}>
                   <Link href={`/post/${post.slug}`}>
                     {post.Title}

@@ -29,24 +29,30 @@ function Layout() {
             <div className="main-content">
                 <div className="intro">
                     <h1>Biography</h1>
-                    <div className="intro-content">
-                        I am a dog in <a href='https://www.zju.edu.cn/'>Zhejiang University</a> supervised by <a href='https://person.zju.edu.cn/wangweihai'>Prof. Wenhai Wang</a>.
+                    I am a dog in <a href='https://www.zju.edu.cn/'>Zhejiang University</a> supervised by <a href='https://person.zju.edu.cn/wangweihai'>Prof. Wenhai Wang</a>. I lead a unique and fascinating life. Mornings are filled with sunny courtyard lounging, where students greet me warmly, offering treats and affection. I'm a familiar, calming presence in Prof. Wang's lectures, often dozing at his feet while students engage in academic discussions. Afternoons are spent strolling with Prof. Wang, playfully contributing to his research talks. I'm not just a pet here, but a cherished part of the university community.
+                </div>
+                <div className='dual-content'>
+                    <div className="interests">    
+                        <h2>Interests</h2>
+                        <div className="intro-content">                    
+                            <h4>LLM for Security</h4><h4>Bug detection in DL</h4>
+                        </div>
+                    </div>                    
+                    <div className="education">
+                        <h2>Education</h2>
+                        <div className="intro-content">
+                            <h4>Zhejiang University, 2022</h4>
+                            M.S., System Security
+                            <h4>University of Science and Technology Beijing, 2018</h4>
+                            B.S., Automation, School of Automation and Electrical Engineering
+                        </div>
                     </div>
-                    <h1>Interests</h1>
-                    <div className="intro-content">                        
-                        <h4>LLM for Security</h4><h4>Bug detection in DL</h4>
-                    </div>
-                    <h1>Education</h1>
-                    <div className="intro-content">
-                        <h3>Zhejiang University, 2022</h3>
-                        M.S., System Security
-                        <h3>University of Science and Technology Beijing, 2018</h3>
-                        B.S., Automation
-                    </div>
-                    <h1>Publications</h1>
-                    <div className="intro-content">
-                        <h4>[In Submission] LLM's Capabilities for Vulnerability Management (name changed for anonymity)</h4>
-                        Anonymous authors 
+                </div>
+                <h2>Publications</h2>
+                <div className="publications">
+                    <div className='pub-item'>
+                        <h4>[In Submission] <a href='https://arxiv.org/abs/2311.06530'>How ChatGPT is Solving Vulnerability Management Problem</a> (name changed for anonymity)</h4>
+                        Anonymous authors
                     </div>
                 </div>
             </div>

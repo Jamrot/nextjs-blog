@@ -1,4 +1,5 @@
 import '../styles/styles.css'
+import '../styles/layoutstyles.css'
 import Banner from '../components/Banner';
 import { useRouter } from 'next/router';
  
