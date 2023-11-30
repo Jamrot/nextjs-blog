@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 function BlogPage({ posts }) {
   return (
@@ -53,16 +53,18 @@ export async function getStaticProps() {
     }
     tagsMap[tag].push({ 
       slug, 
-      Title: data.Title,
-      Tags: data.Tags,
-      Text: data.Text });
+      Title: data.Title || '', 
+      Text: data.Text || '' ,
+      Year: data.Year || '',
+    });
   });
 
   return {
     slug,
-    Title: data.Title,
-    Tags: data.Tags,
-    Text: data.Text,
+    Title: data.Title || '',
+    Tags: data.Tags || [],
+    Text: data.Text || '',
+    Year: data.Year || '',
   };
 });
 
@@ -76,6 +78,7 @@ export async function getStaticProps() {
 
 function TagsPage({ tagsMap }) {
   const [selectedTag, setSelectedTag] = useState(null);
+  const [sortOrder, setSortOrder] = useState('asc');
 
   const getAllPosts = () => {
     const allPosts = Object.values(tagsMap).flat();
@@ -92,8 +95,32 @@ function TagsPage({ tagsMap }) {
     return uniquePosts;
   };
 
+  const sortedPosts = useMemo(() => {
+    const postsToSort = selectedTag ? tagsMap[selectedTag] : getAllPosts();
+    return postsToSort.slice().sort((a, b) => {
+      const yearA = a.Year.toString();
+      const yearB = b.Year.toString();
+  
+      if (sortOrder === 'asc') {
+        return yearA.localeCompare(yearB);
+      } else {
+        return yearB.localeCompare(yearA);
+      }
+    });
+  }, [tagsMap, selectedTag, sortOrder]);
+  
+  
+
+  const toggleSortOrder = () => {
+    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+  };
+
   return (
     <div className="blog-page-content">
+      <button onClick={toggleSortOrder}>
+        Sort by Year ({sortOrder === 'asc' ? 'Ascending' : 'Descending'})
+      </button>
+
       <div className="tags-list">
         <button onClick={() => setSelectedTag(null)}>All</button>
         {Object.keys(tagsMap).map(tag => (
@@ -111,7 +138,7 @@ function TagsPage({ tagsMap }) {
                     {post.Title}
                   </Link>
                   <br/>{post.Text}
-                  <br/>{post.Tags.join(', ')}
+                  <br/>{Array.isArray(post.Tags) ? post.Tags.join(', ') : post.Tags}
                 </li>
               ))
             : getAllPosts().map(post => (
@@ -120,7 +147,7 @@ function TagsPage({ tagsMap }) {
                     {post.Title}
                   </Link>
                   <br/>{post.Text}
-                  <br/>{post.Tags.join(', ')}
+                  <br/>{Array.isArray(post.Tags) ? post.Tags.join(', ') : post.Tags}
                 </li>
               ))
           }
