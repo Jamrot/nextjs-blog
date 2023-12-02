@@ -49,40 +49,12 @@ body {
     transform-origin: bottom left;
 }
 
-.blog-page-content{
+.blog-page {
     /* padding-top: 80px; */
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.blog-page, .blog-post {
-    background-color: white;  
-    border-radius: 5px;  
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
-}
-
-.blog-page ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.blog-page li {
-    margin: 10px 0;
-    padding: 20px;
-    padding-left: 30px;
-    border-bottom: 1px solid #ddd;  /* 添加边框以区分项目 */
-}
-
-.blog-page li a {
-    text-decoration: none;
-    color: #000000;  
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.blog-page li:last-child {
-    border-bottom: none;
-}
 
 .tags-list {
     background-color: #ffffff;
@@ -108,69 +80,122 @@ body {
     transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-.tags-list button:hover {
+.tags-list button:hover, .tags-list .active-tag  {
     background-color: #5e5e5e;
     color: #ffffff;
 }
 
-/* Markdown Content Styling */
-.content {
-    background-color: #fff;
-    padding: 20px;
-    /* padding-top: 80px; */
+.post-find {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.search-box {
+    flex-grow: 1; 
+    margin-right: 25px; /* 在搜索框和排序选项之间添加一些右边距 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+  
+.search-box input[type="text"] {
+    /* flex-grow: 1; */
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 20px auto;
-    max-width: 800px; 
-    font-family: 'Montserrat', 'Roboto', 'Times New Roman', Times, serif;
-    /* line-height: 2; */
+    /* font-size: 16px; */
 }
 
-.content h1, h2 h3, h4, h5, h6 {
-    color: #212121;
-    font-family: 'Montserrat', 'Roboto', 'Times New Roman', Times, serif;
-    line-height: 1;
+.sort-options {
+    flex-grow: 0; /* 防止排序按钮伸展 */
+    display: flex;
+    justify-content: flex-end; /* 排序按钮靠右显示 */
+    align-items: center; /* 垂直居中对齐排序按钮 */
 }
 
-.content p, ul {
-    font-family: 'Montserrat', 'Roboto', 'Times New Roman', Times, serif;
-    color: #2c3e50;
-    line-height: 1.7;
-    margin: 10px 0;
-}
-
-.content a {
-    color: #a3a3a3;
+.sort-options button{
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: rgb(103, 103, 103);
     text-decoration: none;
-    border-bottom: 1px solid #929292;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 5px; /* 为按钮添加左右间距 */
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-.content a:hover {
+.sort-options button:hover, .sort-options button:focus {
+    background-color: #f0f0f0; /* 按钮悬停和焦点时背景色变化 */
+    color: #333; /* 按钮悬停和焦点时文字颜色变深 */
+}
+
+.sort-options button.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.blog-post {
+    background-color: white;  
+    border-radius: 5px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.blog-post ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-post li {
+    margin: 10px 0;
+    padding: 20px;
+    padding-left: 30px;
+    border-bottom: 1px solid #ddd; 
+}
+
+.blog-post li a {
+    text-decoration: none;
+    color: #000000;  
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blog-post li a:hover {
+    text-decoration: none;
+    color: #818181;  
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blog-post li:last-child {
     border-bottom: none;
 }
 
-.content code {
-    background-color: #ecf0f1;
-    border-radius: 3px;
-    padding: 2px 4px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.content pre {
-    background-color: #ecf0f1;
+.blog-post button {
+    background: none;
+    border: none;
+    color: rgb(103, 103, 103);
+    text-decoration: underline;
+    padding: 5px 5px 5px 0;
+    font-weight: normal;
     border-radius: 5px;
-    padding: 10px;
-    overflow-x: auto;
-    line-height: 2;
+    font-size: 14px;
+    /* margin: 5px; */
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
 
-.content blockquote {
-    border-left: 4px solid #6b6b6b;
-    background-color: rgb(248, 248, 248);
-    padding: 10px;
-    padding-left: 20px;
-    margin: 10px 0;
-    line-height: 2;
-    /* font-style: italic; */
+.blog-post button:hover {
+    /* background-color: #5e5e5e; */
+    /* color: #ffffff; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .img {
