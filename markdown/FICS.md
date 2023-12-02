@@ -3,6 +3,7 @@ Title: "FICS"
 Tags: ["Read", "inconsistency", "star"]
 Authors: ['Ahmadi', 'Mansour', 'Farkhani', 'Reza Mirzazade', 'Williams', 'Ryan', 'Lu', 'Long']
 Collections: ["patch detection ▸ recurring", "patch detection ▸ vulnerability detection"]
+Created time: November 21, 2023 2:07 PM
 Conference: USENIX Security
 Date Added: August 30, 2023 9:16 AM (UTC)
 Short Title: FICS

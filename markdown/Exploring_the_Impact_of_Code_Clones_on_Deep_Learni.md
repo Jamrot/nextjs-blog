@@ -3,6 +3,7 @@ Title: "Exploring the Impact of Code Clones on Deep Learning Software"
 Tags: ["2023", "TOSEM", "code clone", "star"]
 Authors: ['Mo', 'Ran', 'Zhang', 'Yao', 'Wang', 'Yushuo', 'Zhang', 'Siyuan', 'Xiong', 'Pu', 'Li', 'Zengyang', 'Zhao', 'Yang']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 2:03 PM
 Date Added: October 23, 2023 8:24 AM (UTC)
 Full Title: "Exploring the Impact of Code Clones on Deep Learning Software"
 URL: https://doi.org/10.1145/3607181

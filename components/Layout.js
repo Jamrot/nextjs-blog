@@ -44,7 +44,7 @@ function Layout() {
                             <h4>Zhejiang University, 2022</h4>
                             M.S., System Security
                             <h4>University of Science and Technology Beijing, 2018</h4>
-                            B.S., Automation, School of Automation and Electrical Engineering
+                            B.E., Automation, School of Automation and Electrical Engineering
                         </div>
                     </div>
                 </div>

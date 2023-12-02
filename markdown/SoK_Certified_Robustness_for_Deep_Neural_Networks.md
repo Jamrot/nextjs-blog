@@ -3,6 +3,7 @@ Title: "SoK: Certified Robustness for Deep Neural Networks"
 Tags: ["2023", "DL model", "Oakland", "Read", "survey"]
 Authors: ['Li', 'Linyi', 'Xie', 'Tao', 'Li', 'Bo']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 1:29 PM
 Conference: Oakland
 Date Added: November 4, 2023 2:17 PM (UTC)
 Text: certifiability robust方法，鲁棒性验证、鲁棒性训练综述

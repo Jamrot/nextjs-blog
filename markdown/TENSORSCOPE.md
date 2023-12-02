@@ -3,6 +3,7 @@ Title: "TENSORSCOPE"
 Tags: ["2023", "DL framework", "Read", "USENIX Security", "differential fuzzing", "inconsistency"]
 Authors: ['Deng', 'Zizhuang', 'Meng', 'Guozhu', 'Chen', 'Kai', 'Liu', 'Tong', 'Xiang', 'Lu', 'Chen', 'Chunyang']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 1:29 PM
 Conference: USENIX Security
 Date Added: October 22, 2023 2:16 PM (UTC)
 Short Title: TENSORSCOPE

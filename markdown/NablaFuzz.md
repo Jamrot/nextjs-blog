@@ -3,6 +3,7 @@ Title: "NablaFuzz"
 Tags: ["2023", "DL framework", "ICSE", "Read", "differential fuzzing"]
 Authors: ['Yang', 'Chenyuan', 'Deng', 'Yinlin', 'Yao', 'Jiayi', 'Tu', 'Yuxing', 'Li', 'Hanchi', 'Zhang', 'Lingming']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 1:29 PM
 Conference: ICSE
 Date Added: November 10, 2023 11:30 AM (UTC)
 Short Title: NablaFuzz
@@ -22,7 +23,7 @@ code: [https://github.com/ise-uiuc/NablaFuzz](https://github.com/ise-uiuc/NablaF
 
 AD中的错误会导致在模型训练过程中的问题，导致模型训练不当，甚至导致训练过程的crash造成资源浪费或潜在的DoS攻击。
 
-虽然**Muffin**可以对训练阶段的DL模型进行测试，但Muffin（1）手动标注DL API的输入约束，导致Muffin只能覆盖一小部分API。（2）使用Keras及其支持的后端TensorFlow、Theano和CNTK，但自2019年Keras 2.3.0起Keras只支持TensorFlow作为后端。（3）不能完全测试DL库中的自动微分（AD）引擎：只涵盖了部分反向模式AD，并忽略了前向模式AD。
+虽然**[Muffin](Muffin%2096e74089e20f433ea7532773d7df9667.md)**可以对训练阶段的DL模型进行测试，但Muffin（1）手动标注DL API的输入约束，导致Muffin只能覆盖一小部分API。（2）使用Keras及其支持的后端TensorFlow、Theano和CNTK，但自2019年Keras 2.3.0起Keras只支持TensorFlow作为后端。（3）不能完全测试DL库中的自动微分（AD）引擎：只涵盖了部分反向模式AD，并忽略了前向模式AD。
 
 ∇Fuzz在PyTorch, TensorFlow, JAX, and OneFlow 4个DL库上对∇Fuzz进行测试，发现了173个bugs，其中144已经被开发者确认（117个未知，107个AD相关），38个已被修复。
 

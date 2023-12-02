@@ -3,6 +3,7 @@ Title: "IvySyn"
 Tags: ["2023", "DL framework", "Read", "USENIX Security", "fuzzing"]
 Authors: ['Christou', 'Neophytos', 'Jin', 'Di', 'Atlidakis', 'Vaggelis', 'Ray', 'Baishakhi', 'Kemerlis', 'Vasileios P.']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 1:29 PM
 Conference: USENIX Security
 Date Added: October 25, 2023 9:49 AM (UTC)
 Short Title: IvySyn
@@ -25,6 +26,13 @@ IvySyn使用静态类型的本地API，进行类型感知的变异，实现对lo
 - 静态类型的本地API：在编译时进行类型检查的API（e.g., C/C++）。在编译代码之前，编译器会检查变量、函数参数和返回值等的类型，以确保它们与预期的类型匹配。（动态类型：Python）
 
 <img src="/IvySyn/Untitled.png" className="img"/>
+> IvySyn通过对低级API进行fuzzing，解决了先前方法（Doctor）在使用高级API进行fuzzing时遇到的问题，主要是因为它能更直接地与DL框架的核心功能交互，避免了一些高级API层面的限制。以下是IvySyn通过fuzz低级API能够解决问题的几个关键点：
+> 
+> 1. **更直接的接口**：低级API直接映射到DL框架的核心操作，这意味着通过fuzzing这些API，可以更直接地测试和发现那些与核心计算和数据操作相关的潜在问题。
+> 2. **避免高级抽象的限制**：高级API通常包括额外的抽象层，例如错误检查、预处理操作等，这些可能掩盖或改变底层操作的行为。通过直接fuzz低级API，IvySyn可以避免这些抽象带来的潜在干扰。
+> 3. **减少对领域专家的依赖**：以往的方法在使用高级API进行fuzzing时，可能需要领域专家的注解来指定有效的参数值组合。而IvySyn通过直接针对低级API进行fuzzing，可以减少对此类专家知识的依赖，从而实现更高程度的自动化。
+> 4. **更广泛的测试范围**：低级API提供了对DL框架底层操作的更全面访问，使得测试可以覆盖到更多的场景和操作，包括一些可能在高级API层面无法直接测试的功能。
+
 ## Background
 
 - Kernels：用本地C/C++代码实现的深度学习框架的核心功能（e.g., 张量操作、数学运算、卷积计算、梯度计算、池化）
@@ -46,7 +54,12 @@ IvySyn使用静态类型的本地API，进行类型感知的变异，实现对lo
     - 自动合成代码片段（PoV）从high-level API trigger相关错误
     - 攻击者可以通过high-level API触发这个bug
 
-## Bug types
+## Results
+
+> Atheris is a production-grade tool, built by Google, and is used to fuzz test their TensorFlow codebase.
+> 
+
+### Bug types
 
 - abort signals
 - floating-point exceptions

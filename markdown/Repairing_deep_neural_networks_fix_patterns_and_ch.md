@@ -1,8 +1,9 @@
 ---
 Title: "Repairing deep neural networks: fix patterns and challenges"
-Tags: ["DNN implementation", "ICSE", "Read"]
+Tags: ["2020", "DNN implementation", "ICSE", "Read"]
 Authors: ['Islam', 'Md Johirul', 'Pan', 'Rangeet', 'Nguyen', 'Giang', 'Rajan', 'Hridesh']
 Collections: ["patch detection ▸ DL"]
+Created time: November 21, 2023 1:29 PM
 Conference: ICSE
 Date Added: November 6, 2023 8:16 AM (UTC)
 Text: DNN用户使用DNN实现模型时的bug，为自动修复DNN实现问题提供指导。
