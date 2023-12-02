@@ -138,7 +138,7 @@ function BlogPage({ tagsMap }) {
       </div>
 
       <div className="tags-list">
-        <button onClick={() => handleTagClick(null)} className={selectedTag ? 'active-tag' : ''}>
+        <button onClick={() => handleTagClick(null)} className={!selectedTag ? 'active-tag' : ''}>
           All
         </button>
         {Object.keys(tagsMap).map(tag => (
